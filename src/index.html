@@ -11,7 +11,21 @@
 </head>
 
 <body>
-  <my-component src="rtsp://196.21.92.82/axis-media/media.amp"></my-component>
+
+  <my-component src="rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream"></my-component>
+
+  <my-component src="rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream"></my-component>
+
+  <script>
+
+
+    setTimeout(() => {
+      const el = document.createElement('my-component');
+      el.setAttribute('src', 'rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream');
+      document.body.appendChild(el);
+    }, 3000)
+  </script>
+
 </body>
 
 </html>
