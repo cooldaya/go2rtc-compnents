@@ -12,15 +12,15 @@
 
 <body>
 
-  <my-component src="rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream"></my-component>
+  <rtsp-video src="rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream"></rtsp-video>
 
-  <my-component src="rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream"></my-component>
+  <rtsp-video src="rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream"></rtsp-video>
 
   <script>
 
 
     setTimeout(() => {
-      const el = document.createElement('my-component');
+      const el = document.createElement('rtsp-video');
       el.setAttribute('src', 'rtsp://admin:asd12345@10.1.10.8:554/h264/chD1/main/av_stream');
       document.body.appendChild(el);
     }, 3000)

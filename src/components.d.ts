@@ -6,11 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface RtspVideo {
         "apiUrl": string;
         "authName": string;
         "authPass": string;
         "host": string;
+        "mode": string;
         "port": string;
         /**
           * The last name
@@ -19,22 +20,23 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLRtspVideoElement extends Components.RtspVideo, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLRtspVideoElement: {
+        prototype: HTMLRtspVideoElement;
+        new (): HTMLRtspVideoElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "rtsp-video": HTMLRtspVideoElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface RtspVideo {
         "apiUrl"?: string;
         "authName"?: string;
         "authPass"?: string;
         "host"?: string;
+        "mode"?: string;
         "port"?: string;
         /**
           * The last name
@@ -42,14 +44,14 @@ declare namespace LocalJSX {
         "src"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "rtsp-video": RtspVideo;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "rtsp-video": LocalJSX.RtspVideo & JSXBase.HTMLAttributes<HTMLRtspVideoElement>;
         }
     }
 }
